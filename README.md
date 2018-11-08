@@ -15,6 +15,18 @@ The api is completely described by [swagger.yaml](swagger.yaml) - paste the cont
 | CORS_ALLOWED_ORIGINS       | *                        | The allowed origins for CORS requests                  |
 | SHUTDOWN_TIMEOUT           | 5s                       | The graceful shutdown timeout ([`time.Duration`](https://golang.org/pkg/time/#Duration) format) |
 
+### Running the application locally
+This is a microservice written in Go. You will need to have Go installed (https://golang.org/doc/install)
+If you also have `make` installed, then simply run the following command:
+```
+make debug
+```
+This will start the application on the default port.
+If you don't have `make`, then:
+```
+go build -o dp-map-renderer cmd/dp-map-renderer/main.go
+./dp-map-renderer
+```
 ### Endpoints
 
 | url                   | Method | Parameter values             | Description                                                                                                                                                                                                                                       |
